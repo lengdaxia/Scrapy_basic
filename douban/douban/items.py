@@ -14,6 +14,7 @@ class DoubanMovieItem(scrapy.Item):
 
     bookName = scrapy.Field()
     bookPostUrl = scrapy.Field()
+    bookPostPath = scrapy.Field()
     bookRate = scrapy.Field()
     bookInfo = scrapy.Field()
     bookCommentNum = scrapy.Field()

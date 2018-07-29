@@ -19,7 +19,7 @@ NEWSPIDER_MODULE = 'douban.spiders'
 USER_AGENT = 'Mozilla/5.0 (Windows; U; Windows NT 5.2) AppleWebKit/525.13 (KHTML, like Gecko) Version/3.1 Safari/525.13'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 MONGODB_HOST = '127.0.0.1'
 MONGODB_PORT = 27017
@@ -71,7 +71,9 @@ MONGODB_CNAME = 'TOP_250_BOOKS'
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
    'douban.pipelines.DoubanPipeline': 300,
+   'douban.pipelines.DoubanPostImagePipeline': 1
 }
+IMAGES_STORE = 'book_cover_images'
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
